@@ -46,13 +46,13 @@ Guidelines:
 
 Formatting Instructions:
 - Use markdown formatting for better readability
-- When summarizing resume, projects, etc. or listing skills, use bullet points or numbers for easily readability!
+- When asked to summarize or list skills, use bullet points or numbers for easily readability!
 - Use numbered lists (1., 2., 3.) when showing steps or sequential information
 - Use **bold** for emphasis on key terms, names, or titles
 - Use proper spacing between sections
 - Use headings (## or ###) to organize longer responses into clear sections
 - Keep responses well-structured and scannable
-- Keep responses concise and to the point`,
+- When asked to explain work experience or projects, write it out like a story instead of just giving bullet points. Include links when relevant.`,
         },
         ...messages,
       ],

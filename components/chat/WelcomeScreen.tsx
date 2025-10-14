@@ -13,8 +13,8 @@ interface WelcomeScreenProps {
 
 const SUGGESTED_PROMPTS = [
   "Tell me about yourself.",
-  "What are your technical skills?",
-  "What was your last internship like?",
+  "Go over your work experience.",
+  "Why are you passionate about technology?",
   "Tell me about your latest project"
 ];
 

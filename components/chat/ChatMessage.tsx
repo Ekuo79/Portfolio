@@ -15,6 +15,11 @@ interface ChatMessageProps {
 }
 
 export function ChatMessage({ role, content, avatarUrl }: ChatMessageProps) {
+  // Check if content mentions Minnie or dog
+  const shouldShowMinnieImage = role === 'assistant' &&
+    (content.toLowerCase().includes('minnie') ||
+     content.toLowerCase().includes('dog'));
+
   if (role === 'user') {
     return (
       <div className="flex justify-end mb-6">
@@ -120,6 +125,16 @@ export function ChatMessage({ role, content, avatarUrl }: ChatMessageProps) {
         >
           {content}
         </ReactMarkdown>
+        {shouldShowMinnieImage && (
+          <div className="mt-3">
+            <img
+              src="/minnie.png"
+              alt="Minnie the dog"
+              className="rounded-2xl max-w-full h-auto max-h-64 object-cover"
+            />
+            <p className="text-xs text-gray-400 mt-1">Minnie!</p>
+          </div>
+        )}
       </div>
     </div>
   );
