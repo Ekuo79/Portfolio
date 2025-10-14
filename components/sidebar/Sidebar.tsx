@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Plus, Github, Linkedin, Mail, FileDown, X } from 'lucide-react';
+import { Plus, Github, Linkedin, Mail, FileDown, X, Trash2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Chat {
@@ -16,6 +16,7 @@ interface SidebarProps {
   currentChatId: string | null;
   onNewChat: () => void;
   onSelectChat: (chatId: string) => void;
+  onDeleteChat: (chatId: string) => void;
   name: string;
   links: {
     linkedin?: string;
@@ -32,6 +33,7 @@ export function Sidebar({
   currentChatId,
   onNewChat,
   onSelectChat,
+  onDeleteChat,
   name,
   links,
   isOpen,
@@ -73,22 +75,34 @@ export function Sidebar({
               <p className="text-gray-500 text-sm text-center py-8">No chat history</p>
             ) : (
               chats.map((chat) => (
-                <Button
-                  key={chat.id}
-                  variant="ghost"
-                  className={cn(
-                    "w-full justify-start text-left font-normal h-auto py-3 px-3 rounded-xl transition-all",
-                    currentChatId === chat.id
-                      ? "bg-gray-700 text-gray-50"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-gray-50"
-                  )}
-                  onClick={() => {
-                    onSelectChat(chat.id);
-                    onClose();
-                  }}
-                >
-                  <div className="truncate">{chat.title}</div>
-                </Button>
+                <div key={chat.id} className="relative group">
+                  <Button
+                    variant="ghost"
+                    className={cn(
+                      "w-full justify-start text-left font-normal h-auto py-3 px-3 pr-10 rounded-xl transition-all",
+                      currentChatId === chat.id
+                        ? "bg-gray-700 text-gray-50"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-gray-50"
+                    )}
+                    onClick={() => {
+                      onSelectChat(chat.id);
+                      onClose();
+                    }}
+                  >
+                    <div className="truncate">{chat.title}</div>
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 hover:text-red-400 hover:bg-gray-600"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onDeleteChat(chat.id);
+                    }}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
               ))
             )}
           </div>

@@ -28,7 +28,7 @@ export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const name = "Eric Kuo";
-  const avatarUrl = undefined;
+  const avatarUrl = "/profile.png";
   const links = {
     linkedin: "https://www.linkedin.com/in/eric-kuo79",
     github: "https://github.com/Ekuo79",
@@ -54,6 +54,15 @@ export default function Home() {
 
   const handleSelectChat = (chatId: string) => {
     setCurrentChatId(chatId);
+  };
+
+  const handleDeleteChat = (chatId: string) => {
+    setChats((prev) => prev.filter((chat) => chat.id !== chatId));
+
+    // If deleting the current chat, clear the current chat ID
+    if (chatId === currentChatId) {
+      setCurrentChatId(null);
+    }
   };
 
   const handleSendMessage = useCallback(async (content: string) => {
@@ -164,6 +173,7 @@ export default function Home() {
         currentChatId={currentChatId}
         onNewChat={handleNewChat}
         onSelectChat={handleSelectChat}
+        onDeleteChat={handleDeleteChat}
         name={name}
         links={links}
         isOpen={isSidebarOpen}

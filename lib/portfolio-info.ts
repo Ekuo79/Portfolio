@@ -2,7 +2,10 @@ export const PORTFOLIO_INFO = `
 # Eric Kuo - Portfolio Information
 
 ## About Me
-Hello, I'm a student at UF studying Computer Science with a minor in Statistics. My professional interests are in Software Engineering and Data Engineering. I'm currently a database manager at UF's Entomology Lab and a software engineer at Florida Community Innovation where I enjoy working on public interest projects.
+Hello, I'm a student at UF studying Computer Science with a minor in Statistics.
+My professional interests are in Software Engineering, Data Engineering and Machine Learning. 
+I'm current roles are a database manager at UF's Entomology Lab and a lead software engineer at Florida Community Innovation where I enjoy working on public interest projects.
+I'm passionate about
 
 ## Education
 
@@ -12,19 +15,23 @@ Hello, I'm a student at UF studying Computer Science with a minor in Statistics.
 
 ## Skills
 ### Programming Languages
-- Python, C++, TypeScript, JavaScript, HTML/CSS, Bash, SQL
+- Python, TypeScript, Bash, SQL
 
-### Frameworks & Libraries
-- Django, Flask, React, NodeJS, Pytorch, Firebase, MongoDB, Apache Spark, DBT
+### Frameworks for Software Development
+- Django, Flask, React, NodeJS, Firebase, MongoDB, 
 
-### Tools & Technologies
-- Git, Docker, Kubernetes, CI/CD, Linux, VS Code, JIRA, Gunicorn, Gitlab, HPC nodes, Slurm, Postman
+### Tools for Data Engineering & Machine Learning
+- Apache Spark, Apache Airflow, dbt
 
 ### AWS Data Tools
-- DMS, S3, Redshift, RDS / Aurora
+- DMS, S3, Redshift, RDS/Aurora, EC2
 
 ###  Oracle Data Tools
 - Oracle Data Integrator, Autonomous Data Warehouse, Autonomous Transaction Processing, Oracle Cloud Infrastructure, Oracle Analysis Cloud, Oracle BI Suite
+
+### Other Tools & Technologies
+- Git, Docker, Kubernetes, GitLab CI/CD, Linux, VS Code, JIRA, Gunicorn, Gitlab, HPC nodes, Slurm, Postman
+
 
 ## Work Experience
 

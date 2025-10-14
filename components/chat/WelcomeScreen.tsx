@@ -12,10 +12,10 @@ interface WelcomeScreenProps {
 }
 
 const SUGGESTED_PROMPTS = [
-  "Tell me about your latest project.",
-  "What are your strongest technical skills?",
-  "Summarize your resume.",
-  "Why are you passionate about software engineering?",
+  "Tell me about yourself.",
+  "What are your technical skills?",
+  "What was your last internship like?",
+  "Tell me about your latest project"
 ];
 
 export function WelcomeScreen({ name, avatarUrl, onSuggestedPrompt, showInputInCenter, inputComponent }: WelcomeScreenProps) {
