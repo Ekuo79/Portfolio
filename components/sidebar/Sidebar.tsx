@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 interface Chat {
   id: string;
   title: string;
-  timestamp: Date;
+  timestamp: Date | string;
 }
 
 interface SidebarProps {
