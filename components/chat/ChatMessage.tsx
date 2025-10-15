@@ -23,7 +23,7 @@ export function ChatMessage({ role, content, avatarUrl }: ChatMessageProps) {
   if (role === 'user') {
     return (
       <div className="flex justify-end mb-6">
-        <div className="bg-gray-700 text-gray-50 rounded-3xl px-5 py-3 max-w-[80%]">
+        <div className="bg-gray-700 text-gray-50 rounded-3xl px-5 py-3 max-w-[80%] break-words">
           {content}
         </div>
       </div>

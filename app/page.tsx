@@ -108,6 +108,7 @@ export default function Home() {
       const allMessages = currentChat?.messages || [];
       // Limit to last 10 messages for cost and performance optimization
       const recentMessages = allMessages.slice(-10);
+
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
