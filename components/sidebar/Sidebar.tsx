@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Plus, Github, Linkedin, Mail, FileDown, X, Trash2 } from 'lucide-react';
+import { Plus, Github, Linkedin, Mail, X, Trash2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Chat {
@@ -137,15 +137,6 @@ export function Sidebar({
                 className="text-gray-400 hover:text-blue-500 transition-colors"
               >
                 <Mail className="h-5 w-5" />
-              </a>
-            )}
-            {links.resume && (
-              <a
-                href={links.resume}
-                download
-                className="text-gray-400 hover:text-blue-500 transition-colors"
-              >
-                <FileDown className="h-5 w-5" />
               </a>
             )}
           </div>
